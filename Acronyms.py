@@ -1,3 +1,5 @@
+# This simple code will help you in creating ACRONYMS.
+
 x = str(input("Enter a Phrase: "))  # User Input Which Can Be Int Type Or Char Type
 t = x.split()  # Splitting The Text
 a = " " # Used For Spaces If Exists
