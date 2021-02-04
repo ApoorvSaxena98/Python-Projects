@@ -4,8 +4,10 @@ m = float(input("Enter mass (in kg): "))
 h = float(input("Enter height (in m): "))
 # Body Mass Index(BMI) = (m/(h*2))
 b = (m/(h*2))
+
+# Approx. values as per Indian Standard
 if(b>0):
-    if (b<=18.5):
+    if (b<=18.5):                                                              
         print("BMI is: ", b, "\nUnder-Weight\nThoda zyada khaa lia kr khaana")
     elif (b > 18.5 and b<=24.9):
         print("BMI is: ", b, "\nHealthy\n Khaana to theek thaak khaa rha hai")
