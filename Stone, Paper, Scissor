@@ -1,0 +1,41 @@
+import random
+from colorama import Fore, Back, Style
+
+a = ["Stone", "Paper", "Scissor"]
+computer = random.choice(a)
+player = input("Enter your choice: ").capitalize()
+
+if player == "Stone":
+    if computer == "Stone":
+        #print("Tie")
+        print(Fore.BLACK + Back.LIGHTBLUE_EX + "Tie !")
+    elif computer == "Paper":
+        #print("You loose! :-( ", computer, "covers", player)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTRED_EX + "You loose! :-)", computer, "covers", player)
+    elif computer == "Scissor":
+        # print("You win! :-)", player, "breaks", computer)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTGREEN_EX + "You win! :-)", player, "breaks", computer)
+
+elif player == "Paper":
+    if computer == "Stone":
+        #print("You win! :-)", player, "covers", computer)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTGREEN_EX + "You win! :-)", player, "cuts", computer)
+    elif computer == "Paper":
+        #print("Tie")
+        print(Fore.BLACK + Back.LIGHTBLUE_EX + "Tie !")
+    elif computer == "Scissor":
+        #print("You loose! :-( ", computer, "cuts", player)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTRED_EX + "You loose! :-)", computer, "cuts", player)
+
+elif player == "Scissor":
+    if computer == "Stone":
+        #print("You loose! :-( ", computer, "breaks", player)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTRED_EX + "You loose! :-)", computer, "breaks", player)
+    elif computer == "Paper":
+        #print("You win! :-)", player, "cuts", computer)
+        print(Fore.LIGHTBLACK_EX + Back.LIGHTGREEN_EX + "You win! :-)", player, "cuts", computer)
+    elif computer == "Scissor":
+        #print("Tie")
+        print(Fore.BLACK + Back.LIGHTBLUE_EX + "Tie !")
+
+#print(random.choice(a))
