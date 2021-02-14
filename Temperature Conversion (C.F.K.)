@@ -1,0 +1,46 @@
+# C -> Celsius F -> Fahrenheit K -> Kelvin
+
+import time
+
+print("Press 'F' -> °C to °F ")
+time.sleep(0.4)     # This will provide the time delay of 0.4 second before running the next statement.
+print("Press 'C' -> °F to °C ")
+time.sleep(0.4)
+print("Press 'K' -> °C to K ")
+time.sleep(0.4)
+print("Press 'C2' -> K to °C ")
+time.sleep(0.4)
+print("Press 'K2' -> °F to K ")
+time.sleep(0.4)
+print("Press 'F2' -> °K to °F\n")
+time.sleep(0.5)
+
+ch = input("Enter your choice: ").capitalize()
+x = float(input("Enter temperature reading: "))
+
+if ch == "F":   # °C to °F
+    f = (9/5)*x + 32
+    print("Temperature in °C: ", x, "which is in °F is: ", round(f, 2))
+
+elif ch == "C":   # °F to °C
+    c = (x - 32) * 5 / 9
+    print("Temperature in °F: ", x, "which is in °C is: ", round(c, 2))
+
+elif ch == "K":   # °C to K
+    k = x + 273.15
+    print("Temperature in °C: ", x, "which is in K is: ", round(k, 2))
+
+elif ch == "C2":   # K to °C
+    c = x - 273.15
+    print("Temperature in K: ", x, "which is in °C is: ", round(c, 2))
+
+elif ch == "K2":   # °F to K
+    k = (x - 32) * 5 / 9 + 273.15
+    print("Temperature in °F: ", x, "which is in K is: ", round(k, 2))
+
+elif ch == "F2":   # K to °F
+    f = ((x -273.15)*9/5)+32
+    print("Temperature in K: ", x, "which is in °F is: ", round(f, 2))
+
+#else:
+ #   exit()
